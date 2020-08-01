@@ -1,0 +1,13 @@
+t(i, j) = {
+
+false						if i+j != |Z|
+
+true						if i = 0 and j = 0
+
+b(Y[j], Z[j]) && t(0, j-1)			if i = 0 and j > 0
+
+b(X[i], Z[i]) && t(i-1, 0)			if i > 0 and j = 0
+
+(b(Y[j], Z[i+j]) && t(i, j-1)) ||               if i > 0 and j > 0
+(b(X[i], Z[i+j]) && t(i-1, j))
+}
